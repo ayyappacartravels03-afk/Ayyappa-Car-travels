@@ -1,0 +1,68 @@
+/* Ayyappa Car Travels - custom styles (Tailwind handles the rest) */
+body { font-family: 'Poppins', sans-serif; }
+.handwriting { font-family: 'Caveat', cursive; }
+/* FullCalendar Dark Theme Overrides */
+.fc { --fc-border-color: #374151; --fc-page-bg-color: #111827; }
+.fc .fc-toolbar-title { font-size: 1.1rem; font-weight: 700; color: #f3f4f6; }
+.fc .fc-button { background-color: #1f2937; border-color: #4b5563; font-size: 0.75rem; text-transform: capitalize; }
+.fc .fc-button-active, .fc .fc-button:hover { background-color: #f59e0b !important; color: #111827 !important; border-color: #d97706 !important; }
+.fc-theme-standard td, .fc-theme-standard th { border-color: #374151; }
+.fc-col-header-cell-cushion { color: #9ca3af; font-size: 0.75rem; font-weight: 600; }
+.fc-daygrid-day-number { color: #d1d5db; font-size: 0.75rem; padding: 4px 6px; }
+.fc-event { border: none !important; border-radius: 6px !important; padding: 2px 4px !important; font-size: 0.7rem !important; cursor: pointer; }
+.star-btn { transition: color 0.15s ease; cursor: pointer; }
+
+/* Smooth scrolling for nav links; offset so the sticky header doesn't cover section titles */
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+
+/* ---------- Responsive polish ---------- */
+html, body { max-width: 100%; overflow-x: hidden; }
+img, svg, video { max-width: 100%; height: auto; }
+h1, h2, h3, p, a, span { overflow-wrap: anywhere; }
+table { min-width: 640px; }                                  /* tables scroll sideways inside their box */
+.fc .fc-toolbar { flex-wrap: wrap; gap: .5rem; justify-content: center; }
+.fc .fc-list-event-title, .fc .fc-list-event-time { color: #e5e7eb; }
+.fc .fc-list-day-cushion { background: #1f2937 !important; }
+
+@media (max-width: 640px) {
+  input, select, textarea { font-size: 16px !important; }    /* stops iPhone zooming when a field is tapped */
+  button, a[href^="#"] { min-height: 40px; }                 /* comfortable thumb targets */
+  .fc .fc-toolbar-title { font-size: .95rem; }
+}
+@media (min-width: 1536px) { body { font-size: 17px; } }     /* big monitors *//* Ayyappa Car Travels - custom styles (Tailwind handles the rest) */
+body { font-family: 'Poppins', sans-serif; }
+.handwriting { font-family: 'Caveat', cursive; }
+/* FullCalendar Dark Theme Overrides */
+.fc { --fc-border-color: #374151; --fc-page-bg-color: #111827; }
+.fc .fc-toolbar-title { font-size: 1.1rem; font-weight: 700; color: #f3f4f6; }
+.fc .fc-button { background-color: #1f2937; border-color: #4b5563; font-size: 0.75rem; text-transform: capitalize; }
+.fc .fc-button-active, .fc .fc-button:hover { background-color: #f59e0b !important; color: #111827 !important; border-color: #d97706 !important; }
+.fc-theme-standard td, .fc-theme-standard th { border-color: #374151; }
+.fc-col-header-cell-cushion { color: #9ca3af; font-size: 0.75rem; font-weight: 600; }
+.fc-daygrid-day-number { color: #d1d5db; font-size: 0.75rem; padding: 4px 6px; }
+.fc-event { border: none !important; border-radius: 6px !important; padding: 2px 4px !important; font-size: 0.7rem !important; cursor: pointer; }
+.star-btn { transition: color 0.15s ease; cursor: pointer; }
+
+/* Smooth scrolling for nav links; offset so the sticky header doesn't cover section titles */
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+
+/* ---------- Responsive polish ---------- */
+html, body { max-width: 100%; overflow-x: hidden; }
+img, svg, video { max-width: 100%; height: auto; }
+h1, h2, h3, p, a, span { overflow-wrap: anywhere; }
+table { min-width: 640px; }                                  /* tables scroll sideways inside their box */
+.fc .fc-toolbar { flex-wrap: wrap; gap: .5rem; justify-content: center; }
+.fc .fc-list-event-title, .fc .fc-list-event-time { color: #e5e7eb; }
+.fc .fc-list-day-cushion { background: #1f2937 !important; }
+
+@media (max-width: 640px) {
+  input, select, textarea { font-size: 16px !important; }    /* stops iPhone zooming when a field is tapped */
+  button, a[href^="#"] { min-height: 40px; }                 /* comfortable thumb targets */
+  .fc .fc-toolbar-title { font-size: .95rem; }
+}
+@media (min-width: 1536px) { body { font-size: 17px; } }     /* big monitors */
+
+/* Popups scroll on their own and never pass the scroll to the page behind */
+#adminModal, #reviewModal { overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+#adminModal > div, #reviewModal > div { max-height: none; }
+#adminModal .overflow-x-auto { overscroll-behavior-x: contain; }
